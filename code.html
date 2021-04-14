@@ -59,32 +59,31 @@
             <div class="row">
                 <div class="col">
                     <pre class="line-numbers"><code class="language-javascript">function reverseString() {
-//Get the user's word
-let userWord = document.getElementById("tacoCat").value;
-let cleanedWord = userWord.toLowerCase().replace(/ /g, "");
-//Do something here with it
-let start = cleanedWord.length - 1;
-let reverseWord = "";
-//For loop
-for (let i = start; i >= 0; i--) {
-reverseWord = reverseWord + cleanedWord[i];
-//Same thing
-//reverseWord += userWord[i];
-}
-let output = document.getElementById("tacoOutput");
-output.innerText = reverseWord;
+    //Get the user's word
+    let userWord = document.getElementById("tacoCat").value;
+    let cleanedWord = userWord.toLowerCase().replace(/ /g, "");
+    //Do something here with it
+    let start = cleanedWord.length - 1;
+    let reverseWord = "";
+    //For loop
+    for (let i = start; i >= 0; i--) {
+        reverseWord = reverseWord + cleanedWord[i];
+        //Same thing
+        //reverseWord += userWord[i];
+    }
+    let output = document.getElementById("tacoOutput");
+    output.innerText = reverseWord;
 
-let finalOutput = document.getElementById("final");
-if (userWord == "") {
-Swal.fire('Please input at least two characters!')
-// finalOutput.innerHTML = "Please input at least two characters to determine if the output is a palindrome."
-} else if (cleanedWord == reverseWord) {
-Swal.fire('This is a Palindrome!')
-} else if (cleanedWord != reverseWord) {
-Swal.fire('This is NOT a Palindrome!')
-} else {
-finalOutput.innerHTML = "This is not a Palindrome.";
-}
+    let finalOutput = document.getElementById("final");
+    if (userWord == "") {
+        Swal.fire('Please input at least two characters to determine if it is a palindrome!')
+    } else if (cleanedWord == reverseWord) {
+        Swal.fire('This is a Palindrome!')
+    } else if (cleanedWord != reverseWord) {
+        Swal.fire('This is NOT a Palindrome!')
+    } else {
+        finalOutput.innerHTML = "This is not a Palindrome.";
+    }
 }
                         </code>
                     </pre>

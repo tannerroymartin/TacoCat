@@ -16,8 +16,7 @@ function reverseString() {
 
     let finalOutput = document.getElementById("final");
     if (userWord == "") {
-        Swal.fire('Please input at least two characters!')
-        // finalOutput.innerHTML = "Please input at least two characters to determine if the output is a palindrome."
+        Swal.fire('Please input at least two characters to determine if it is a palindrome!')
     } else if (cleanedWord == reverseWord) {
         Swal.fire('This is a Palindrome!')
     } else if (cleanedWord != reverseWord) {
