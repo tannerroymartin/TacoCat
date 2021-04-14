@@ -25,7 +25,6 @@ function reverseString() {
     } else {
         finalOutput.innerHTML = "This is not a Palindrome.";
     }
-
 }
 
 
